@@ -1,6 +1,7 @@
 from __future__ import annotations
 import numpy as np
 from enum import Enum
+from numpy.typing import NDArray
 
 class Axis(Enum):
     """
@@ -84,7 +85,7 @@ class Axis(Enum):
                 raise ValueError(f"Invalid index: {index}")
 
     @property
-    def unit_vector(self) -> np.ndarray:
+    def unit_vector(self) -> NDArray[np.float64]:
         """
         Get the unit vector of the axis.
         

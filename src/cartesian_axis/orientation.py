@@ -1,8 +1,7 @@
 import numpy as np
 from dataclasses import dataclass
-
 from typing import TYPE_CHECKING
-
+from numpy.typing import NDArray
 from .axis import Axis
 
 if TYPE_CHECKING:
@@ -68,7 +67,7 @@ class AxisOrientation:
         return self.up == Axis.X
 
     @property
-    def unit_vector(self) -> np.ndarray:
+    def unit_vector(self) -> NDArray[np.float64]:
         """
         The stack of unit vectors in the forward, right, and up directions.
         

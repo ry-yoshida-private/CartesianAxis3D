@@ -37,3 +37,19 @@ class CoordinateHandedness(Enum):
             True if the coordinate handedness is left-handed, False otherwise.
         """
         return self == CoordinateHandedness.LEFT
+
+    @property
+    def cross_product_value(self) -> int:
+        """
+        Get the value of the cross product.
+
+        Returns
+        -------
+        int:
+            The value of the cross product.
+        """
+        match self:
+            case self.RIGHT:
+                return 1
+            case self.LEFT:
+                return -1
